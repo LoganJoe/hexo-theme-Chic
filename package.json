@@ -13,5 +13,8 @@
     "sirice",
     "hexo-theme"
   ],
-  "author": "Sirice"
+  "author": "Sirice",
+  "dependencies": {
+    "@upupming/hexo-renderer-markdown-it-plus": "^2.0.2"
+  }
 }
