@@ -3,6 +3,8 @@
         <div class="container">
             <div class="navbar-header header-logo"><a href="<%- config.root %>"><%= theme.navname %></a></div>
             <div class="menu navbar-right">
+                <% var defaultName = 'pc' %>
+                <%- partial('_partial/search', { name: defaultName }) %>
                 <% for (var i in theme.nav){ %>
                     <a class="menu-item" href="<%- url_for(theme.nav[i]) %>"><%= i %></a>
                 <% } %>
@@ -21,10 +23,6 @@
                 </div>
                 <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
             </div>
-            <% var defaultName = 'pc' %>
-            <%- partial('_partial/search', { name: defaultName }) %>
-
-            // 这里是 mobile 的menu
             <div class="menu" id="mobile-menu">
                 <div class="navbar-mobile-right">
                     <% var type = 'mobile' %>
