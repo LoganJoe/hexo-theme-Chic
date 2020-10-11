@@ -63,3 +63,9 @@ if (is_archive()){
         <% } %>
     <% } %>
 <% } %>
+
+<%# search %>
+
+<% if(config.search && config.search.enable ) { %>
+    <%- partial('_plugins/search.ejs') %>
+<% } %>
