@@ -25,12 +25,12 @@
             <%- partial('_partial/search', { name: defaultName }) %>
 
             // 这里是 mobile 的menu
-            <div class="navbar-mobile-right">
-                <% var type = 'mobile' %>
-                <%- partial('_partial/search', { name: type }) %>
-                <div class="menu-toggle" onclick="mobileBtn()">&#9776; 目录</div>
-            </div>
             <div class="menu" id="mobile-menu">
+                <div class="navbar-mobile-right">
+                    <% var type = 'mobile' %>
+                    <%- partial('_partial/search', { name: type }) %>
+                    <div class="menu-toggle" onclick="mobileBtn()">&#9776; 目录</div>
+                </div>
                 <% for (var i in theme.nav){ %>
                     <a class="menu-item" href="<%- url_for(theme.nav[i]) %>"><%= i %></a>
                 <% } %>
